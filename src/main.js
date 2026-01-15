@@ -148,13 +148,40 @@ function initAuth() {
   // Mock Login
   const loginForm = document.getElementById('login-form-element');
   if (loginForm) {
+    // Role selection UI interaction
+    const roleRadios = document.querySelectorAll('input[name="auth-role"]');
+    roleRadios.forEach(radio => {
+      radio.addEventListener('change', (e) => {
+        document.querySelectorAll('.role-option').forEach(opt => {
+          opt.style.background = 'transparent';
+          opt.style.boxShadow = 'none';
+        });
+        const parent = e.target.closest('.role-option');
+        parent.style.background = 'var(--white)';
+        parent.style.boxShadow = 'var(--shadow-sm)';
+      });
+    });
+
     loginForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      const email = document.getElementById('login-email').value;
-      // Simulate success
-      localStorage.setItem('currentUser', JSON.stringify({ email: email, name: email.split('@')[0] }));
-      alert('Connexion réussie !');
-      window.location.href = '/index.html';
+      const loginIdentity = document.getElementById('login-email').value;
+      const password = document.getElementById('login-password').value;
+      const selectedRole = document.querySelector('input[name="auth-role"]:checked').value;
+
+      if (selectedRole === 'admin') {
+        if (loginIdentity === 'admin' && password === 'admin') {
+          localStorage.setItem('currentUser', JSON.stringify({ email: 'admin@lesopticiensdugolfe.bj', name: 'Administrateur', role: 'admin' }));
+          alert('Connexion Admin réussie !');
+          window.location.href = '/admin/dashboard.html';
+        } else {
+          alert('Identifiants Admin incorrects.');
+        }
+      } else {
+        // Mock Client login logic
+        localStorage.setItem('currentUser', JSON.stringify({ email: loginIdentity, name: loginIdentity.split('@')[0], role: 'client' }));
+        alert('Connexion réussie !');
+        window.location.href = '/index.html';
+      }
     });
   }
 

@@ -1421,3 +1421,14 @@ main>section {
     display: none;
   }
 }
+
+/* Role Selector Styles Helper */
+.role-option:has(input:checked) {
+  background: var(--white) !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+
+.auth-page .input-with-icon i {
+  color: var(--primary);
+  opacity: 0.6;
+}

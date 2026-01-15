@@ -37,11 +37,25 @@
                         <h2>Bon retour parmi nous</h2>
                         <p class="subtitle">Connectez-vous pour accéder à votre espace personnalisé.</p>
 
+                        <div class="role-selector"
+                            style="display: flex; gap: 10px; margin-bottom: 2rem; background: var(--bg-alt); padding: 5px; border-radius: 12px;">
+                            <label class="role-option"
+                                style="flex: 1; text-align: center; cursor: pointer; padding: 10px; border-radius: 8px; transition: var(--transition); background: var(--white); box-shadow: var(--shadow-sm);">
+                                <input type="radio" name="auth-role" value="client" checked style="display: none;">
+                                <span style="font-weight: 600; font-size: 0.9rem;">Client</span>
+                            </label>
+                            <label class="role-option"
+                                style="flex: 1; text-align: center; cursor: pointer; padding: 10px; border-radius: 8px; transition: var(--transition);">
+                                <input type="radio" name="auth-role" value="admin" style="display: none;">
+                                <span style="font-weight: 600; font-size: 0.9rem;">Admin</span>
+                            </label>
+                        </div>
+
                         <div class="form-group">
-                            <label for="login-email">Email</label>
+                            <label for="login-email">Email ou Identifiant</label>
                             <div class="input-with-icon">
                                 <i class="far fa-envelope"></i>
-                                <input type="email" id="login-email" placeholder="votre@email.com" required>
+                                <input type="text" id="login-email" placeholder="Email ou Identifiant" required>
                             </div>
                         </div>
 
