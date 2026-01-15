@@ -21,7 +21,7 @@ body.admin-body {
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     min-height: 100vh;
     margin: 0;
-    display: flex;
+    /* display: flex; REMOVED to fix sidebar overlap */
 }
 
 /* Sidebar */
@@ -134,19 +134,19 @@ body.admin-body {
 /* Main Content */
 .admin-main {
     margin-left: var(--admin-sidebar-w);
-    flex-grow: 1;
+    /* flex-grow: 1; REMOVED */
     padding: 1.5rem 2rem;
-    width: calc(100vw - var(--admin-sidebar-w));
-    max-width: calc(100vw - var(--admin-sidebar-w));
+    width: auto;
+    /* Allow natural block width */
+    /* max-width removed to prevent right-side clipping */
     box-sizing: border-box;
-    transition: margin-left 0.3s ease, width 0.3s ease, max-width 0.3s ease;
+    transition: margin-left 0.3s ease;
     overflow-x: hidden;
 }
 
 .admin-main.expanded {
     margin-left: 80px;
-    width: calc(100vw - 80px);
-    max-width: calc(100vw - 80px);
+    /* Width adjusts automatically */
 }
 
 .admin-header {
