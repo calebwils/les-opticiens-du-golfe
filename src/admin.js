@@ -40,4 +40,31 @@ const AdminApp = {
     }
 };
 
-document.addEventListener('DOMContentLoaded', () => AdminApp.init());
+// Sidebar Toggle Functionality
+function initSidebarToggle() {
+    const sidebar = document.getElementById('adminSidebar');
+    const mainContent = document.getElementById('adminMain');
+    const toggleBtn = document.getElementById('sidebarToggle');
+    const toggleIcon = toggleBtn?.querySelector('i');
+
+    if (!sidebar || !mainContent || !toggleBtn) return;
+
+    toggleBtn.addEventListener('click', () => {
+        sidebar.classList.toggle('collapsed');
+        mainContent.classList.toggle('expanded');
+
+        // Toggle icon direction
+        if (sidebar.classList.contains('collapsed')) {
+            toggleIcon.classList.remove('fa-chevron-left');
+            toggleIcon.classList.add('fa-chevron-right');
+        } else {
+            toggleIcon.classList.remove('fa-chevron-right');
+            toggleIcon.classList.add('fa-chevron-left');
+        }
+    });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    AdminApp.init();
+    initSidebarToggle();
+});

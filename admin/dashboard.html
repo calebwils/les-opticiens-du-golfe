@@ -11,18 +11,23 @@
 
 <body class="admin-body">
 
-    <aside class="admin-sidebar">
+    <aside class="admin-sidebar" id="adminSidebar">
+        <button class="sidebar-toggle" id="sidebarToggle">
+            <i class="fas fa-chevron-left"></i>
+        </button>
         <div class="admin-logo">
             <img src="/logo-new.jpg" alt="Les Opticiens du Golfe">
         </div>
         <nav>
             <ul class="admin-nav">
-                <li class="active"><a href="/admin/dashboard.html"><i class="fas fa-chart-line"></i> Dashboard</a></li>
-                <li><a href="/admin/clients.html"><i class="fas fa-users"></i> Clients</a></li>
-                <li><a href="/admin/stock.html"><i class="fas fa-box-open"></i> Stocks</a></li>
-                <li><a href="/admin/besoins.html"><i class="fas fa-clipboard-list"></i> Prise de Besoins</a></li>
-                <li><a href="/admin/rappels.html"><i class="fas fa-bell"></i> Rappels Clients</a></li>
-                <li><a href="/admin/ventes.html"><i class="fas fa-file-invoice-dollar"></i> Ventes</a></li>
+                <li class="active"><a href="/admin/dashboard.html"><i class="fas fa-chart-line"></i>
+                        <span>Dashboard</span></a></li>
+                <li><a href="/admin/clients.html"><i class="fas fa-users"></i> <span>Clients</span></a></li>
+                <li><a href="/admin/stock.html"><i class="fas fa-box-open"></i> <span>Stocks</span></a></li>
+                <li><a href="/admin/besoins.html"><i class="fas fa-clipboard-list"></i> <span>Prise de
+                            Besoins</span></a></li>
+                <li><a href="/admin/rappels.html"><i class="fas fa-bell"></i> <span>Rappels Clients</span></a></li>
+                <li><a href="/admin/ventes.html"><i class="fas fa-file-invoice-dollar"></i> <span>Ventes</span></a></li>
             </ul>
         </nav>
         <div class="admin-sidebar-footer"
@@ -34,7 +39,7 @@
         </div>
     </aside>
 
-    <main class="admin-main">
+    <main class="admin-main" id="adminMain">
         <header class="admin-header">
             <div>
                 <h1 style="color: var(--primary);">Tableau de Bord</h1>
