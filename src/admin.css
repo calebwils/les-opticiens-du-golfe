@@ -90,19 +90,20 @@ body.admin-body {
 .admin-main {
     margin-left: var(--admin-sidebar-w);
     flex-grow: 1;
-    padding: 3rem;
-    max-width: 1400px;
+    padding: 1.5rem 2rem;
+    max-width: 1600px;
 }
 
 .admin-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 1.5rem;
     margin-bottom: 3rem;
 }
 
 .admin-header h1 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 700;
     margin: 0;
     color: var(--admin-primary);
@@ -116,19 +117,19 @@ body.admin-body {
 /* Stats Cards */
 .admin-stats-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 2rem;
-    margin-bottom: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .stat-card {
     background: var(--admin-card-bg);
-    padding: 2rem;
-    border-radius: 20px;
+    padding: 1.25rem;
+    border-radius: 12px;
     box-shadow: var(--admin-shadow);
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
     transition: transform 0.3s ease;
     border: 1px solid transparent;
 }
@@ -139,26 +140,26 @@ body.admin-body {
 }
 
 .stat-icon {
-    width: 60px;
-    height: 60px;
-    border-radius: 16px;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 }
 
 .stat-info h3 {
-    font-size: 0.9rem;
+    font-size: 0.75rem;
     font-weight: 600;
     color: var(--admin-text-light);
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin: 0 0 8px 0;
+    letter-spacing: 0.3px;
+    margin: 0 0 6px 0;
 }
 
 .stat-info p {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     font-weight: 800;
     color: var(--admin-primary);
     margin: 0;
@@ -167,16 +168,16 @@ body.admin-body {
 /* Data Tables & Cards */
 .admin-card {
     background: var(--admin-card-bg);
-    border-radius: 24px;
+    border-radius: 16px;
     box-shadow: var(--admin-shadow);
-    padding: 2.5rem;
+    padding: 1.5rem;
     border: 1px solid var(--admin-border);
 }
 
 .admin-card h2 {
-    font-size: 1.25rem;
+    font-size: 1.05rem;
     font-weight: 700;
-    margin: 0 0 2rem 0;
+    margin: 0 0 1.25rem 0;
     color: var(--admin-primary);
 }
 
