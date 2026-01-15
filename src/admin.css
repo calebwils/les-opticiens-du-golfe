@@ -136,12 +136,16 @@ body.admin-body {
     margin-left: var(--admin-sidebar-w);
     flex-grow: 1;
     padding: 1.5rem 2rem;
+    width: calc(100vw - var(--admin-sidebar-w));
     max-width: calc(100vw - var(--admin-sidebar-w));
-    transition: margin-left 0.3s ease, max-width 0.3s ease;
+    box-sizing: border-box;
+    transition: margin-left 0.3s ease, width 0.3s ease, max-width 0.3s ease;
+    overflow-x: hidden;
 }
 
 .admin-main.expanded {
     margin-left: 80px;
+    width: calc(100vw - 80px);
     max-width: calc(100vw - 80px);
 }
 
