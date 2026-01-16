@@ -50,11 +50,10 @@ function initSidebarToggle() {
     if (!sidebar || !mainContent || !toggleBtn) return;
 
     toggleBtn.addEventListener('click', () => {
-        sidebar.classList.toggle('collapsed');
-        mainContent.classList.toggle('expanded');
+        document.body.classList.toggle('sidebar-collapsed');
 
-        // Toggle icon direction
-        if (sidebar.classList.contains('collapsed')) {
+        // Toggle icon direction based on body class
+        if (document.body.classList.contains('sidebar-collapsed')) {
             toggleIcon.classList.remove('fa-chevron-left');
             toggleIcon.classList.add('fa-chevron-right');
         } else {
