@@ -132,21 +132,22 @@ body.admin-body {
 }
 
 /* Main Content */
+/* Main Content */
 .admin-main {
-    margin-left: var(--admin-sidebar-w);
-    /* flex-grow: 1; REMOVED */
+    margin-left: 240px !important;
+    /* Force margin to match sidebar width */
     padding: 1.5rem 2rem;
     width: auto;
-    /* Allow natural block width */
-    /* max-width removed to prevent right-side clipping */
+    position: relative;
+    /* Ensure z-index works if needed */
+    z-index: 1;
     box-sizing: border-box;
     transition: margin-left 0.3s ease;
-    overflow-x: hidden;
+    min-height: 100vh;
 }
 
 .admin-main.expanded {
-    margin-left: 80px;
-    /* Width adjusts automatically */
+    margin-left: 80px !important;
 }
 
 .admin-header {
