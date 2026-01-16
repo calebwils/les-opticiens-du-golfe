@@ -21,14 +21,15 @@ body.admin-body {
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     min-height: 100vh;
     margin: 0;
-    padding-left: 240px;
-    /* Default Space for Sidebar */
+    padding-left: 260px;
+    /* Space for Sidebar + 20px buffer */
     transition: padding-left 0.3s ease;
     box-sizing: border-box;
 }
 
 body.sidebar-collapsed {
-    padding-left: 80px;
+    padding-left: 100px;
+    /* 80px + 20px buffer */
 }
 
 /* Sidebar */
